@@ -23,7 +23,7 @@ namespace ScreenViewer.Server.Threads
             while (true)
             {
                 Socket socket = listener.AcceptSocket();
-                Thread thr = new Thread(new ParameterizedThreadStart())
+                Thread thr = new Thread(new ParameterizedThreadStart(ScreenViewer.Server.Threads.AcceptThread.StartCommunication));
             }
         }
     }
